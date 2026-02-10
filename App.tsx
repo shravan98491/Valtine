@@ -6,6 +6,7 @@ import Timeline from './components/Timeline';
 import Memories from './components/Memories';
 import Reasons from './components/Reasons';
 import FinalSurprise from './components/FinalSurprise';
+import CustomCursor from './components/CustomCursor';
 
 export default function App() {
   const [partnerName, setPartnerName] = useState<string>('');
@@ -19,7 +20,8 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen font-sans selection:bg-rose-500 selection:text-white">
+    <div className="relative min-h-screen font-sans selection:bg-rose-500 selection:text-white cursor-none sm:cursor-auto">
+      <CustomCursor />
       <StarryBackground />
       
       {!isStarted ? (

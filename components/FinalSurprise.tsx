@@ -13,8 +13,8 @@ export default function FinalSurprise({ name }: FinalSurpriseProps) {
   const [isShaking, setIsShaking] = useState(false);
   const [accepted, setAccepted] = useState(false);
   
-  // States for the runaway "No" button
-  const [noPosition, setNoPosition] = useState<{ top?: string; left?: string; position?: any; transform?: string }>({});
+  // States for the runaway "No" button using proper React.CSSProperties type
+  const [noPosition, setNoPosition] = useState<React.CSSProperties>({});
 
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useIntersectionObserver(ref, { threshold: 0.3 });
